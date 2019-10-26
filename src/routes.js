@@ -5,7 +5,6 @@ import {createMaterialTopTabNavigator} from 'react-navigation-tabs';
 
 import {Colors} from './config/DefaultStyle';
 
-import home from './pages/home';
 import vacas from './pages/vaca/index';
 import vaca_description from './pages/vaca/description';
 import prenha from './pages/lotes/prenha';
@@ -61,6 +60,12 @@ const Tabs = createMaterialTopTabNavigator(
 );
 
 const Stack = createStackNavigator({
+  Vacas: {
+    screen: vacas,
+  },
+  VacaDescription: {
+    screen: vaca_description,
+  },
   Home: {
     screen: Tabs,
     navigationOptions: () => ({
@@ -71,20 +76,11 @@ const Stack = createStackNavigator({
       headerStyle: {backgroundColor: 'transparent'},
     }),
   },
-  Vacas: {
-    screen: vacas,
-  },
-  VacaDescription: {
-    screen: vaca_description,
-  },
 });
 
 const Container = createAppContainer(
   createSwitchNavigator({
     Stack,
-    home: {
-      screen: home,
-    },
   }),
 );
 
