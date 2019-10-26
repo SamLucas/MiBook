@@ -7,10 +7,16 @@ const LoteStyle = StyleSheet.create({
     textAlign: 'center',
     marginVertical: 15,
   },
-  description: {
-    opacity: 0.6,
-    textAlign: 'justify',
-    marginVertical: 15,
+  description_container: {
+    marginVertical: 30,
+    alignItems: 'center',
+  },
+  description_content: {
+    flexDirection: 'row',
+  },
+  description_content_title: {
+    fontWeight: 'bold',
+    marginRight: 5,
   },
   card: {
     marginHorizontal: 15,
@@ -26,9 +32,6 @@ const LoteStyle = StyleSheet.create({
     fontWeight: 'bold',
     paddingRight: 5,
   },
-  descriptions: {
-    opacity: 0.7,
-  },
   footer: {
     marginTop: 5,
     opacity: 0.5,
@@ -36,11 +39,15 @@ const LoteStyle = StyleSheet.create({
   },
   button: {
     marginHorizontal: 15,
-    borderRadius: 5,
+    marginVertical: 15,
+    borderRadius: 20,
     backgroundColor: Colors.cor_default,
   },
   button_text: {
     textAlign: 'center',
+    color: Colors.white,
+    marginVertical: 10,
+    fontWeight: 'bold',
   },
 });
 

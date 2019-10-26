@@ -7,13 +7,21 @@ import {Colors, DefaultStyle} from '../../config/DefaultStyle';
 export default function lotes() {
   return (
     <View style={DefaultStyle.container}>
-      <View>
-        <Text style={LoteStyle.title}>Vazia</Text>
-        <Text style={[LoteStyle.description, DefaultStyle.margins]}>
-          Lorem Ipsum é simplesmente uma simulação de texto da indústria
-          tipográfica e de impressos, e vem sendo utilizado desde o século XVI,
-          quando um impressor desconhecido pegou uma bandeja
-        </Text>
+      <Text style={LoteStyle.title}>Vazia</Text>
+
+      <View style={LoteStyle.description_container}>
+        <View style={LoteStyle.description_content}>
+          <Text style={LoteStyle.description_content_title}>
+            Quantidade de animais:
+          </Text>
+          <Text>25</Text>
+        </View>
+        <View style={LoteStyle.description_content}>
+          <Text style={LoteStyle.description_content_title}>
+            Media de produção:
+          </Text>
+          <Text>25</Text>
+        </View>
       </View>
 
       <View style={LoteStyle.card}>

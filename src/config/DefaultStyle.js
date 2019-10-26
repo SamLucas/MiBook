@@ -26,6 +26,12 @@ const DefaultStyle = StyleSheet.create({
   radius_full: {
     borderRadius: 5,
   },
+  title_session: {
+    textTransform: 'uppercase',
+    fontSize: 12,
+    borderBottomWidth: 0.6,
+    paddingBottom: 5,
+  },
 });
 
 module.exports = {DefaultStyle, Colors};

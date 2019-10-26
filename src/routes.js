@@ -3,6 +3,8 @@ import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createMaterialTopTabNavigator} from 'react-navigation-tabs';
 
+import {Colors} from './config/DefaultStyle';
+
 import home from './pages/home';
 import vacas from './pages/vaca/index';
 import vaca_description from './pages/vaca/description';
@@ -28,12 +30,22 @@ const Tabs = createMaterialTopTabNavigator(
         fontWeight: 'bold',
       },
       style: {backgroundColor: 'white'},
-      indicatorStyle: {backgroundColor: '#9C27B0'},
+      indicatorStyle: {backgroundColor: Colors.cor_default},
     },
   },
 );
 
 const Stack = createStackNavigator({
+  Home: {
+    screen: Tabs,
+    navigationOptions: () => ({
+      title: 'Hackaton',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+      headerStyle: {backgroundColor: 'transparent'},
+    }),
+  },
   Vacas: {
     screen: vacas,
   },
@@ -45,7 +57,6 @@ const Stack = createStackNavigator({
 const Container = createAppContainer(
   createSwitchNavigator({
     Stack,
-    Tabs,
     home: {
       screen: home,
     },
