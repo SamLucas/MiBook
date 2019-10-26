@@ -16,11 +16,36 @@ import vazia from './pages/lotes/vazia';
 
 const Tabs = createMaterialTopTabNavigator(
   {
-    vazia,
-    prenha,
-    terco_final,
-    seca,
-    transicao,
+    Vazia: {
+      screen: vazia,
+      navigationOptions: () => ({
+        title: 'Vazia',
+      }),
+    },
+    Prenha: {
+      screen: prenha,
+      navigationOptions: () => ({
+        title: 'Prenha',
+      }),
+    },
+    TercoFinal: {
+      screen: terco_final,
+      navigationOptions: () => ({
+        title: 'Lac. Final',
+      }),
+    },
+    Seca: {
+      screen: seca,
+      navigationOptions: () => ({
+        title: 'Seca',
+      }),
+    },
+    Transicao: {
+      screen: transicao,
+      navigationOptions: () => ({
+        title: 'Transição',
+      }),
+    },
   },
   {
     tabBarOptions: {

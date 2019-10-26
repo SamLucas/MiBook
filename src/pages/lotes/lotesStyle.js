@@ -8,8 +8,8 @@ const LoteStyle = StyleSheet.create({
     marginVertical: 15,
   },
   description_container: {
-    marginVertical: 30,
-    alignItems: 'center',
+    alignItems: 'flex-start',
+    marginLeft: 10,
   },
   description_content: {
     flexDirection: 'row',
@@ -48,6 +48,10 @@ const LoteStyle = StyleSheet.create({
     color: Colors.white,
     marginVertical: 10,
     fontWeight: 'bold',
+  },
+  svg: {
+    alignSelf: 'center',
+    marginTop: 10,
   },
 });
 
