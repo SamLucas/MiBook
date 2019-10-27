@@ -7,25 +7,23 @@ import LoteStyle from '../pages/lotes/lotesStyle';
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconFontisto from 'react-native-vector-icons/Fontisto';
 
-import Imagess from '../assets/images/01.png';
-
-export default function components() {
-  const caminho = '../assets/images/';
-  const name_foto = '01.png';
+const post = ({item}) => {
+  // const caminho = '../assets/images/01.png';
 
   return (
     <View style={{marginVertical: 5}}>
       <View style={style.card_header}>
-        <IconMaterialCommunityIcons
+        {/* <IconMaterialCommunityIcons
           name="account-circle-outline"
           style={style.icon}
-        />
-        <Text style={{fontSize: 16, marginTop: 2, fontWeight: 'bold'}}>
-          Username teste
-        </Text>
+        /> */}
+        <Image source={{uri: item.photo_profile}} style={style.image_profile} />
+        <Text style={{fontSize: 16, fontWeight: 'bold'}}>{item.username}</Text>
       </View>
       <Image
-        source={require('../assets/images/01.png')}
+        source={{
+          uri: item.name_image,
+        }}
         style={{
           width: Dimensions.get('window').width,
           height: Dimensions.get('window').width + 30,
@@ -44,7 +42,7 @@ export default function components() {
       </View>
     </View>
   );
-}
+};
 
 const style = StyleSheet.create({
   container: {
@@ -52,6 +50,14 @@ const style = StyleSheet.create({
     backgroundColor: Colors.backgroundColor,
   },
   icon: {fontSize: 25, paddingRight: 15},
+  image_profile: {
+    fontSize: 25,
+    paddingRight: 15,
+    borderRadius: 50,
+    width: 25,
+    height: 25,
+    marginRight: 10,
+  },
   card_header: {
     flexDirection: 'row',
     borderTopWidth: 0.4,
@@ -71,3 +77,5 @@ const style = StyleSheet.create({
     // borderBottomRightRadius: 5,
   },
 });
+
+module.exports = post;

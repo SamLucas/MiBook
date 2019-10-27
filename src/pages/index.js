@@ -20,7 +20,7 @@ export default function pages() {
           style={style.textinput}
           placeholder={'No que vc esta pensando...'}
         />
-        <FlatList data={Data} renderItem={() => <Post />} />
+        <FlatList data={Data} renderItem={({item}) => <Post item={item} />} />
       </ScrollView>
     </View>
   );
@@ -30,7 +30,7 @@ const style = StyleSheet.create({
   textinput: {
     marginTop: 15,
     marginBottom: 8,
-    marginHorizontal: 15,
+    marginHorizontal: 10,
     backgroundColor: Colors.white,
     borderRadius: 20,
     paddingHorizontal: 30,
