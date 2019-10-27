@@ -32,6 +32,11 @@ const pages = ({navigation}) => (
       style={{
         position: 'absolute',
         right: 15,
+        width: 30,
+        height: 30,
+        textAlign: 'center',
+        paddingVertical: 5,
+        // backgroundColor: 'red',
         top: 15,
         color: Colors.white,
         zIndex: 54546545646,

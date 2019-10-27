@@ -32,7 +32,15 @@ const Stack = createStackNavigator({
         <IconMaterialCommunityIcons
           name="menu"
           onPress={() => navigation.navigate('Profile')}
-          style={{fontSize: 22, marginLeft: 15}}
+          style={{
+            fontSize: 22,
+            marginLeft: 15,
+            // backgroundColor: 'red',
+            textAlign: 'center',
+            paddingVertical: 3,
+            width: 30,
+            height: 30,
+          }}
         />
       ),
       headerRight: (

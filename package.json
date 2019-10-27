@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "dev": "adb reverse tcp:8081 tcp:8081 && yarn start"
+    "dev": "adb reverse tcp:8081 tcp:8081 && yarn start",
+    "apk": "cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
     "react": "16.8.1",

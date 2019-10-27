@@ -26,19 +26,49 @@ const post = ({item}) => {
         }}
         style={{
           width: Dimensions.get('window').width,
-          height: Dimensions.get('window').width + 30,
+          height: Dimensions.get('window').width + 5,
         }}
       />
       <View style={style.card_footer}>
         <IconMaterialCommunityIcons name="heart-outline" style={style.icon} />
+        <Text
+          style={{
+            fontWeight: 'bold',
+            paddingHorizontal: 5,
+            marginLeft: -15,
+            marginRight: 15,
+            paddingTop: 5,
+          }}>
+          {item.like}
+        </Text>
         <IconMaterialCommunityIcons
           name="heart-broken-outline"
           style={style.icon}
         />
+        <Text
+          style={{
+            fontWeight: 'bold',
+            paddingHorizontal: 5,
+            marginLeft: -15,
+            paddingTop: 5,
+            marginRight: 15,
+          }}>
+          {item.dlike}
+        </Text>
         <IconMaterialCommunityIcons
           name="comment-text-multiple-outline"
           style={style.icon}
         />
+        <Text
+          style={{
+            fontWeight: 'bold',
+            paddingHorizontal: 5,
+            marginLeft: -15,
+            marginRight: 15,
+            paddingTop: 5,
+          }}>
+          {item.comments}
+        </Text>
       </View>
     </View>
   );
