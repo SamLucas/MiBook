@@ -5,7 +5,7 @@ import Collapsible from 'react-native-collapsible';
 import {Colors, DefaultStyle} from '../config/DefaultStyle';
 import LotesStyle from '../pages/lotes/lotesStyle';
 
-const listintens = ({item}) => {
+const listintens = ({item, navigation}) => {
   const [colapsed, setColapsed] = useState(true);
   return (
     <View style={LotesStyle.card}>
@@ -23,7 +23,9 @@ const listintens = ({item}) => {
             <Text style={style.colapsed_description}>{ele.value}</Text>
           </View>
         ))}
-        <TouchableOpacity style={LotesStyle.button}>
+        <TouchableOpacity
+          style={LotesStyle.button}
+          onPress={() => navigation.navigate('VacaDescription')}>
           <Text style={LotesStyle.button_text}>Detalhes</Text>
         </TouchableOpacity>
       </Collapsible>

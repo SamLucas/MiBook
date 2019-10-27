@@ -12,6 +12,9 @@ import seca from './pages/lotes/seca';
 import terco_final from './pages/lotes/terco_final';
 import transicao from './pages/lotes/transicao';
 import vazia from './pages/lotes/vazia';
+import avaliation_index from './pages/avaliation';
+import avaliation from './pages/avaliation/avaliation';
+import avaliation_questions from './pages/avaliation/questions';
 
 const Tabs = createMaterialTopTabNavigator(
   {
@@ -60,20 +63,47 @@ const Tabs = createMaterialTopTabNavigator(
 );
 
 const Stack = createStackNavigator({
-  Vacas: {
-    screen: vacas,
-  },
-  VacaDescription: {
-    screen: vaca_description,
-  },
-  Home: {
-    screen: Tabs,
+  // Home: {
+  //   screen: Tabs,
+  //   navigationOptions: () => ({
+  //     title: 'Hackaton',
+  //     headerTitleStyle: {
+  //       fontWeight: 'bold',
+  //     },
+  //     headerStyle: {backgroundColor: 'transparent'},
+  //   }),
+  // },
+  // Vacas: {
+  //   screen: vacas,
+  // },
+  AvaliationQuestion: {
+    screen: avaliation_questions,
     navigationOptions: () => ({
-      title: 'Hackaton',
+      title: 'Questões',
       headerTitleStyle: {
+        fontSize: 15,
         fontWeight: 'bold',
       },
-      headerStyle: {backgroundColor: 'transparent'},
+    }),
+  },
+  AvaliationHome: {
+    screen: avaliation_index,
+    navigationOptions: () => ({
+      title: 'Avaliação',
+      headerTitleStyle: {
+        fontSize: 15,
+        fontWeight: 'bold',
+      },
+    }),
+  },
+  Avaliation: {
+    screen: avaliation,
+    navigationOptions: () => ({
+      title: 'Categorias da avaliação',
+      headerTitleStyle: {
+        fontSize: 15,
+        fontWeight: 'bold',
+      },
     }),
   },
 });
@@ -81,6 +111,7 @@ const Stack = createStackNavigator({
 const Container = createAppContainer(
   createSwitchNavigator({
     Stack,
+    avaliation_questions,
   }),
 );
 

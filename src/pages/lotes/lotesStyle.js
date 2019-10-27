@@ -49,6 +49,19 @@ const LoteStyle = StyleSheet.create({
     marginVertical: 10,
     fontWeight: 'bold',
   },
+
+  button_white: {
+    marginHorizontal: 15,
+    marginVertical: 15,
+    borderRadius: 20,
+    backgroundColor: Colors.white,
+  },
+  button_text_white: {
+    textAlign: 'center',
+    color: Colors.black,
+    marginVertical: 10,
+    fontWeight: 'bold',
+  },
   svg: {
     alignSelf: 'center',
     marginTop: 10,

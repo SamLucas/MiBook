@@ -25,12 +25,12 @@ const Score = [
     min: 75,
     max: 100,
   },
-  {
-    id: 5,
-    colors: Colors.danger,
-    min: 100,
-    max: 125,
-  },
+  // {
+  //   id: 5,
+  //   colors: Colors.danger,
+  //   min: 100,
+  //   max: 125,
+  // },
 ];
 
 module.exports = Score;

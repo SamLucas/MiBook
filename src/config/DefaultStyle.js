@@ -9,6 +9,7 @@ const Colors = {
   warning: '#FFFF00',
   danger: '#FF0000',
   cor_default: '#120a8f',
+  black: 'black',
 };
 
 const DefaultStyle = StyleSheet.create({

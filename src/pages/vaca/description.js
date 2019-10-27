@@ -9,24 +9,9 @@ import {sliderWidth, itemWidth} from '../../config/size_carrousel';
 import Score from '../../data/score';
 import {ScrollView} from 'react-native-gesture-handler';
 
+import Avaliation from '../../components/avaliattion_score';
+
 export default function vaca() {
-  const score_card = item => (
-    // console.log(item.min);
-    // <CheckBox
-    //   style={style.checkBox}
-    //   onClick={() => {
-    //     console.log('aksdjkl');
-    //   }}
-    //   isChecked={() => console.log('aksdjkl')}
-    //   rightText={item.min}
-    // />
-    <View style={style.card_score}>
-      <View style={[style.card_score_color, {backgroundColor: item.colors}]} />
-      <Text>
-        {item.min} - {item.max}
-      </Text>
-    </View>
-  );
   return (
     <ScrollView>
       <View style={DefaultStyle.container}>
@@ -35,7 +20,16 @@ export default function vaca() {
             <Text style={style.card_header_title}>Score</Text>
           </View>
           <View>
-            <FlatList data={Score} renderItem={({item}) => score_card(item)} />
+            <FlatList
+              data={Score}
+              contentContainerStyle={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+              }}
+              renderItem={({item}) => <Avaliation item={item} />}
+              keyExtractor={item => item.id}
+              scrollEnabled={true}
+            />
           </View>
         </View>
 
