@@ -27,9 +27,9 @@ export default function avaliation({navigation}) {
         <View style={style.card_container}>
           <Text style={style.title}>65%</Text>
           <View style={style.card_container_description}>
-            <Text style={{fontWeight: 'bold', fontSize: 15}}>Parabéns!</Text>
+            <Text style={{fontWeight: 'bold', fontSize: 15}}>Atenção!</Text>
             <Text style={{marginVertical: 10}}>
-              Você faz parte de 56% dos produtores
+              56% dos produtores estão na mesma categoria que você.
             </Text>
           </View>
         </View>

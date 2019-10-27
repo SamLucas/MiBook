@@ -16,6 +16,7 @@ import avaliation_questions from './pages/avaliation/questions';
 
 import Friends from './pages/friends';
 import Profile from './pages/profile';
+import Search from './components/search';
 
 const Stack = createStackNavigator({
   Home: {
@@ -42,10 +43,10 @@ const Stack = createStackNavigator({
       ),
     }),
   },
-  AvaliationHome: {
-    screen: avaliation_index,
+  Avaliation: {
+    screen: avaliation,
     navigationOptions: () => ({
-      title: 'Avaliação',
+      title: 'Categorias da avaliação',
       headerTitleStyle: {
         fontSize: 15,
         fontWeight: 'bold',
@@ -62,10 +63,11 @@ const Stack = createStackNavigator({
       },
     }),
   },
-  Avaliation: {
-    screen: avaliation,
+
+  AvaliationHome: {
+    screen: avaliation_index,
     navigationOptions: () => ({
-      title: 'Categorias da avaliação',
+      title: 'Avaliação',
       headerTitleStyle: {
         fontSize: 15,
         fontWeight: 'bold',
@@ -76,8 +78,9 @@ const Stack = createStackNavigator({
 
 const Container = createAppContainer(
   createSwitchNavigator({
-    Friends,
     Stack,
+    Search,
+    Friends,
     Profile,
   }),
 );

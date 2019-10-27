@@ -1,5 +1,13 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Dimensions,
+} from 'react-native';
+
+import VacaAmbiental from '../../assets/svg/vaca_ambiental.svg';
 
 import {Colors, DefaultStyle} from '../../config/DefaultStyle';
 import LoteStyle from '../../pages/lotes/lotesStyle';
@@ -7,9 +15,15 @@ import LoteStyle from '../../pages/lotes/lotesStyle';
 export default function avaliation({navigation}) {
   return (
     <View style={DefaultStyle.container}>
+      {/* <View style={{flexDirection: 'row', justifyContent: 'space-around'}}> */}
+      {/* <View> */}
       <TouchableOpacity
         onPress={() => navigation.navigate('AvaliationQuestion')}
-        style={LoteStyle.button}>
+        style={[
+          LoteStyle.button,
+          // {width: Dimensions.get('window').width / 2 - 25},
+        ]}>
+        {/* <VacaAmbiental width="100" height="100" /> */}
         <Text style={LoteStyle.button_text}>Sanitária</Text>
       </TouchableOpacity>
 
@@ -24,10 +38,14 @@ export default function avaliation({navigation}) {
         style={LoteStyle.button}>
         <Text style={LoteStyle.button_text}>Ambiental</Text>
       </TouchableOpacity>
-
+      {/* </View> */}
+      {/* // <View> */}
       <TouchableOpacity
         onPress={() => navigation.navigate('AvaliationQuestion')}
-        style={LoteStyle.button}>
+        style={[
+          LoteStyle.button,
+          // {width: Dimensions.get('window').width / 2 - 25},
+        ]}>
         <Text style={LoteStyle.button_text}>Comportamental</Text>
       </TouchableOpacity>
 
@@ -36,6 +54,8 @@ export default function avaliation({navigation}) {
         style={LoteStyle.button}>
         <Text style={LoteStyle.button_text}>Pscologica</Text>
       </TouchableOpacity>
+      {/* </View> */}
+      {/* // </View> */}
 
       <TouchableOpacity
         onPress={() => navigation.navigate('AvaliationHome')}

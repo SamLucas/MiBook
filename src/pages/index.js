@@ -35,6 +35,7 @@ export default function pages({navigation}) {
           />
           <IconFeather
             name="search"
+            onPress={() => navigation.navigate('Search')}
             style={{
               fontSize: 28,
               color: Colors.black,
