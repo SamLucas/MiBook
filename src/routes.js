@@ -7,6 +7,7 @@ import {Colors} from './config/DefaultStyle';
 
 import vacas from './pages/vaca/index';
 import vaca_description from './pages/vaca/description';
+import index from './pages/';
 import prenha from './pages/lotes/prenha';
 import seca from './pages/lotes/seca';
 import terco_final from './pages/lotes/terco_final';
@@ -73,9 +74,9 @@ const Stack = createStackNavigator({
   //     headerStyle: {backgroundColor: 'transparent'},
   //   }),
   // },
-  // Vacas: {
-  //   screen: vacas,
-  // },
+  Home: {
+    screen: index,
+  },
   AvaliationHome: {
     screen: avaliation_index,
     navigationOptions: () => ({
@@ -110,7 +111,7 @@ const Stack = createStackNavigator({
 
 const Container = createAppContainer(
   createSwitchNavigator({
-    Stack,
+    index,
     avaliation_questions,
   }),
 );

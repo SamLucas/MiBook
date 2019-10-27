@@ -19,6 +19,7 @@
     "react-native-screens": "1.0.0-alpha.23",
     "react-native-snap-carousel": "^3.8.2",
     "react-native-svg": "^9.13.3",
+    "react-native-vector-icons": "^6.6.0",
     "react-navigation": "^4.0.10",
     "react-navigation-stack": "^1.10.3",
     "react-navigation-tabs": "^2.5.6"

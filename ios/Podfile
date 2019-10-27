@@ -36,6 +36,8 @@ target 'hackathon_agroup' do
 
 
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'hackathon_agroupTests' do
     inherit! :search_paths
     # Pods for testing

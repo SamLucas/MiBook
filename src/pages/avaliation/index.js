@@ -9,6 +9,9 @@ import LoteStyle from '../lotes/lotesStyle';
 import Listitens from '../../components/colapsed_vaca';
 
 import Dicas from '../../data/dicas';
+import {SvgXml} from 'react-native-svg';
+
+import Certificate from '../../assets/svg/certificate';
 
 export default function avaliation({navigation}) {
   return (
@@ -16,7 +19,10 @@ export default function avaliation({navigation}) {
       <View style={style.card_container}>
         <Text style={style.title}>65%</Text>
         <View style={style.card_container_description}>
-          <Text>asdlahjslçdjasdasdasdasdasdasdasdkj</Text>
+          <Text style={{fontWeight: 'bold', fontSize: 15}}>Parabéns!</Text>
+          <Text style={{marginVertical: 10}}>
+            Você faz parte de 56% dos produtores
+          </Text>
         </View>
       </View>
       <FlatList
