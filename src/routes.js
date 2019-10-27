@@ -1,9 +1,15 @@
-import React from 'react';
-import {createAppContainer, createSwitchNavigator} from 'react-navigation';
+import React, {useState} from 'react';
+import {
+  createAppContainer,
+  createSwitchNavigator,
+  NavigationActions,
+} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createMaterialTopTabNavigator} from 'react-navigation-tabs';
 
 import {Colors} from './config/DefaultStyle';
+
+import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import vacas from './pages/vaca/index';
 import vaca_description from './pages/vaca/description';
@@ -16,6 +22,9 @@ import vazia from './pages/lotes/vazia';
 import avaliation_index from './pages/avaliation';
 import avaliation from './pages/avaliation/avaliation';
 import avaliation_questions from './pages/avaliation/questions';
+import friends from './pages/friends';
+import friendscomponent from './components/friends';
+import profile from './pages/profile';
 
 const Tabs = createMaterialTopTabNavigator(
   {
@@ -64,18 +73,27 @@ const Tabs = createMaterialTopTabNavigator(
 );
 
 const Stack = createStackNavigator({
-  // Home: {
-  //   screen: Tabs,
-  //   navigationOptions: () => ({
-  //     title: 'Hackaton',
-  //     headerTitleStyle: {
-  //       fontWeight: 'bold',
-  //     },
-  //     headerStyle: {backgroundColor: 'transparent'},
-  //   }),
-  // },
   Home: {
     screen: index,
+    navigationOptions: () => ({
+      title: 'MiBook',
+      headerTitleStyle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+      },
+      headerLeft: (
+        <IconMaterialCommunityIcons
+          name="menu"
+          style={{fontSize: 22, marginRight: -30, marginLeft: 10}}
+        />
+      ),
+      headerRight: (
+        <IconMaterialCommunityIcons
+          name="bell-outline"
+          style={{fontSize: 22, marginRight: 15}}
+        />
+      ),
+    }),
   },
   AvaliationHome: {
     screen: avaliation_index,
@@ -111,7 +129,10 @@ const Stack = createStackNavigator({
 
 const Container = createAppContainer(
   createSwitchNavigator({
-    index,
+    Stack,
+    profile,
+    friends,
+    friendscomponent,
     avaliation_questions,
   }),
 );
