@@ -7,19 +7,42 @@ import {FlatList, TouchableOpacity} from 'react-native-gesture-handler';
 
 import Drawer from 'react-native-drawer';
 
+import IconFeather from 'react-native-vector-icons/Feather';
+
 import Post from '../components/post';
 import Data from '../data/post';
 import Friend from '../pages/friends';
 
-export default function pages() {
+export default function pages({navigation}) {
   const [drawer, setDrawer] = useState(false);
   return (
     <View style={{flex: 1, backgroundColor: Colors.background}}>
       <ScrollView>
-        <TextInput
-          style={style.textinput}
-          placeholder={'No que vc esta pensando...'}
-        />
+        <View style={{flex: 1, flexDirection: 'row'}}>
+          <TextInput
+            style={style.textinput}
+            placeholder={'No que vc esta pensando...'}
+          />
+          <IconFeather
+            name="users"
+            onPress={() => navigation.navigate('Friends')}
+            style={{
+              fontSize: 28,
+              color: Colors.black,
+              paddingTop: 28,
+              paddingHorizontal: 15,
+            }}
+          />
+          <IconFeather
+            name="search"
+            style={{
+              fontSize: 28,
+              color: Colors.black,
+              paddingTop: 28,
+              width: 40,
+            }}
+          />
+        </View>
         <FlatList data={Data} renderItem={({item}) => <Post item={item} />} />
       </ScrollView>
     </View>

@@ -1,28 +1,44 @@
 import React from 'react';
 
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, StatusBar} from 'react-native';
 
 import {DefaultStyle, Colors} from '../config/DefaultStyle';
 
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {FlatList} from 'react-native-gesture-handler';
+import {FlatList, TouchableOpacity} from 'react-native-gesture-handler';
 
 const Option = [
   {
     title: 'Perfil',
+    action: 'AvaliationHome',
     icon: 'playlist-check',
   },
   {
     title: 'Avaliação',
+    action: 'AvaliationHome',
     icon: 'file-document-edit-outline',
   },
   {
     title: 'Logout',
+    action: 'AvaliationHome',
     icon: 'logout',
   },
 ];
-const pages = () => (
+const pages = ({navigation}) => (
   <View style={{flex: 1, backgroundColor: Colors.background}}>
+    <StatusBar backgroundColor={Colors.black} />
+    <IconMaterialCommunityIcons
+      name="keyboard-backspace"
+      style={{
+        position: 'absolute',
+        right: 15,
+        top: 15,
+        color: Colors.white,
+        zIndex: 54546545646,
+        fontSize: 20,
+      }}
+      onPress={() => navigation.navigate('Stack')}
+    />
     <View style={{backgroundColor: Colors.black, flexDirection: 'row'}}>
       {/* <IconMaterialCommunityIcons
         name="account-circle-outline"
@@ -61,7 +77,8 @@ const pages = () => (
       data={Option}
       style={{marginTop: 40}}
       renderItem={({item}) => (
-        <View
+        <TouchableOpacity
+          onPress={() => navigation.navigate(item.action)}
           style={{
             backgroundColor: Colors.white,
             paddingHorizontal: 15,
@@ -74,7 +91,7 @@ const pages = () => (
             style={{paddingVertical: 5, paddingHorizontal: 20, fontSize: 15}}
           />
           <Text style={{marginTop: 5}}>{item.title}</Text>
-        </View>
+        </TouchableOpacity>
       )}
     />
   </View>

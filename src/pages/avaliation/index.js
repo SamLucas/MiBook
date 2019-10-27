@@ -1,5 +1,12 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet, FlatList} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+  StyleSheet,
+  FlatList,
+} from 'react-native';
 
 import Collapsible from 'react-native-collapsible';
 
@@ -15,29 +22,31 @@ import Certificate from '../../assets/svg/certificate';
 
 export default function avaliation({navigation}) {
   return (
-    <View style={DefaultStyle.container}>
-      <View style={style.card_container}>
-        <Text style={style.title}>65%</Text>
-        <View style={style.card_container_description}>
-          <Text style={{fontWeight: 'bold', fontSize: 15}}>Parabéns!</Text>
-          <Text style={{marginVertical: 10}}>
-            Você faz parte de 56% dos produtores
-          </Text>
+    <ScrollView>
+      <View style={DefaultStyle.container}>
+        <View style={style.card_container}>
+          <Text style={style.title}>65%</Text>
+          <View style={style.card_container_description}>
+            <Text style={{fontWeight: 'bold', fontSize: 15}}>Parabéns!</Text>
+            <Text style={{marginVertical: 10}}>
+              Você faz parte de 56% dos produtores
+            </Text>
+          </View>
         </View>
+        <FlatList
+          data={Dicas}
+          renderItem={({item}) => (
+            <Listitens item={item} navigation={navigation} />
+          )}
+          keyExtractor={item => item.id}
+        />
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Avaliation')}
+          style={LoteStyle.button}>
+          <Text style={LoteStyle.button_text}>Calcular</Text>
+        </TouchableOpacity>
       </View>
-      <FlatList
-        data={Dicas}
-        renderItem={({item}) => (
-          <Listitens item={item} navigation={navigation} />
-        )}
-        keyExtractor={item => item.id}
-      />
-      <TouchableOpacity
-        onPress={() => navigation.navigate('Avaliation')}
-        style={LoteStyle.button}>
-        <Text style={LoteStyle.button_text}>Calcular</Text>
-      </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 }
 

@@ -8,7 +8,8 @@ const Colors = {
   success: '#32CD32',
   warning: '#FFFF00',
   danger: '#FF0000',
-  cor_default: '#120a8f',
+  // cor_default: '#120a8f',
+  cor_default: 'black',
   black: 'black',
 };
 
