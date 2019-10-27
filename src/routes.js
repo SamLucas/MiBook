@@ -76,20 +76,20 @@ const Stack = createStackNavigator({
   // Vacas: {
   //   screen: vacas,
   // },
-  AvaliationQuestion: {
-    screen: avaliation_questions,
+  AvaliationHome: {
+    screen: avaliation_index,
     navigationOptions: () => ({
-      title: 'Questões',
+      title: 'Avaliação',
       headerTitleStyle: {
         fontSize: 15,
         fontWeight: 'bold',
       },
     }),
   },
-  AvaliationHome: {
-    screen: avaliation_index,
+  AvaliationQuestion: {
+    screen: avaliation_questions,
     navigationOptions: () => ({
-      title: 'Avaliação',
+      title: 'Questões',
       headerTitleStyle: {
         fontSize: 15,
         fontWeight: 'bold',
