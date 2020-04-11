@@ -56,7 +56,10 @@ const pages = ({navigation}) => (
         }}
       /> */}
       <Image
-        source={require('../assets/images/01.jpg')}
+        source={{
+          uri:
+            'https://avatars1.githubusercontent.com/u/30835506?s=460&u=2df1454c4d31b214b5ad7144687a0e42ca63d5e0&v=4',
+        }}
         style={{
           width: 100,
           height: 100,

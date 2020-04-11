@@ -10,6 +10,16 @@ const Data = [
     comments: 12,
   },
   {
+    id: 5,
+    username: 'Fernanda Torres',
+    photo_profile: 'https://i.ytimg.com/vi/7Xu_s1YJhyg/maxresdefault.jpg',
+    name_image:
+      'https://correio-cdn1.cworks.cloud/fileadmin/acervo/uploads/RTEmagicC_lilac.jpg.jpg',
+    like: 12,
+    dlike: 5,
+    comments: 12,
+  },
+  {
     id: 2,
     username: 'Rosa Julia',
     photo_profile:
@@ -38,16 +48,6 @@ const Data = [
       'https://scontent-amt2-1.cdninstagram.com/vp/91d1f4cbfc38c7c356a0e821f74eb194/5DF58B26/t51.2885-15/e35/c174.0.1091.1091/s320x320/67141424_122353375724035_8253860455213447520_n.jpg?_nc_ht=scontent-amt2-1.cdninstagram.com',
     name_image:
       'https://scontent-lax3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/60326319_119815872599770_2771496890616159497_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&oh=3ab3f7c5c9ad0f5fbaee5ead543528ed&oe=5E09A43C&ig_cache_key=MjA2NzQ2Mzk5MDUzMjgyMDcxOA%3D%3D.2',
-    like: 12,
-    dlike: 5,
-    comments: 12,
-  },
-  {
-    id: 5,
-    username: 'Fernanda Torres',
-    photo_profile: 'https://i.ytimg.com/vi/7Xu_s1YJhyg/maxresdefault.jpg',
-    name_image:
-      'https://correio-cdn1.cworks.cloud/fileadmin/acervo/uploads/RTEmagicC_lilac.jpg.jpg',
     like: 12,
     dlike: 5,
     comments: 12,

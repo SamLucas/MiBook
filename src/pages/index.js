@@ -21,7 +21,7 @@ export default function pages({navigation}) {
         <View style={{flex: 1, flexDirection: 'row'}}>
           <TextInput
             style={style.textinput}
-            placeholder={'No que vc esta pensando...'}
+            placeholder={'No que você esta pensando...'}
           />
           <IconFeather
             name="users"
