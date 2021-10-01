@@ -11,6 +11,7 @@
     "apk": "cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
+    "@react-native-community/toolbar-android": "^0.2.1",
     "react": "16.8.1",
     "react-native": "0.61.2",
     "react-native-check-box": "^2.1.7",

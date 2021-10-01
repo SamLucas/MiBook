@@ -1,24 +1,24 @@
-import React, {useEffect} from 'react';
-import {View, Text, StyleSheet, Image, Dimensions} from 'react-native';
+import React, { useEffect } from 'react';
+import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
 
-import {Colors, DefaultStyle} from '../config/DefaultStyle';
+import { Colors, DefaultStyle } from '../config/DefaultStyle';
 import LoteStyle from '../pages/lotes/lotesStyle';
 
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconFontisto from 'react-native-vector-icons/Fontisto';
 
-const post = ({item}) => {
+const post = ({ item }) => {
   // const caminho = '../assets/images/01.png';
 
   return (
-    <View style={{marginVertical: 5}}>
+    <View style={{ marginVertical: 5 }}>
       <View style={style.card_header}>
         {/* <IconMaterialCommunityIcons
           name="account-circle-outline"
           style={style.icon}
         /> */}
-        <Image source={{uri: item.photo_profile}} style={style.image_profile} />
-        <Text style={{fontSize: 16, fontWeight: 'bold'}}>{item.username}</Text>
+        <Image source={{ uri: item.photo_profile }} style={style.image_profile} />
+        <Text style={{ fontSize: 16, fontWeight: 'bold' }}>{item.username}</Text>
       </View>
       <Image
         source={{
@@ -79,7 +79,7 @@ const style = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.backgroundColor,
   },
-  icon: {fontSize: 25, paddingRight: 15},
+  icon: { fontSize: 25, paddingRight: 15, color: "black" },
   image_profile: {
     fontSize: 25,
     paddingRight: 15,
